@@ -1,0 +1,22 @@
+const timeRef = document.querySelector('.timeStamp');
+const monthArr = [
+  'Jan',
+  'Feb',
+  'Mar',
+  'Apr',
+  'May',
+  'June',
+  'July',
+  'Aug',
+  'Sep',
+  'Oct',
+  'Nov',
+  'Dec',
+];
+const data = new Date(Date.now() - 86400000);
+const lastDay = data.getDate();
+const month = data.getMonth();
+const year = data.getFullYear();
+const monthName = monthArr[month];
+const str = `Posted: ${monthName} ${lastDay} ${year} 4:00 AM ET | Last   Updated: ${monthName} ${lastDay} `;
+timeRef.innerHTML = str;

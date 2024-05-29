@@ -1,0 +1,29 @@
+// Get the current URL and extract its parameters
+var currentURL = window.location.href;
+var queryString = currentURL.split('?')[1];
+
+function navigateToBHPage(newURL) {
+  if (queryString) {
+    newURL += '?' + queryString;
+  }
+  window.location.href = newURL;
+}
+
+function extractDomain(url) {
+  const domainPattern = /^https?:\/\/[^/]+/;
+  const matches = url.match(domainPattern);
+  if (matches && matches.length > 0) {
+    return matches[0];
+  }
+  return null;
+}
+
+const allBHlinks = document.querySelectorAll('a');
+allBHlinks.forEach((link) => {
+  if (link.getAttribute('href') === '/bh/') {
+    link.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      navigateToBHPage(`${extractDomain(currentURL)}/bh/`);
+    });
+  }
+});

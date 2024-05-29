@@ -1,0 +1,107 @@
+@media screen and (min-width: 1240px) and (max-width: 1360px) {
+  /* container */
+  .container,
+  .headerContainer {
+    padding: 0 20px;
+  }
+
+  /* header */
+  .headerBottomLinks {
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  /* container */
+  .container,
+  .headerContainer {
+    padding: 0 20px;
+  }
+
+  /* header */
+  .headerBottomLinks {
+    overflow: scroll;
+  }
+  .headerBottomLink {
+    white-space: nowrap;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  /* content */
+  .showMore {
+    margin-top: 50px;
+  }
+
+  /* cbc */
+  .cbcBlock {
+    width: 32%;
+  }
+
+  /* pages */
+  .pages {
+    margin-top: 50px;
+  }
+  .pagesInner {
+    flex-wrap: wrap;
+    row-gap: 30px;
+  }
+  .pagesBox {
+    width: 32%;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* header */
+  .headerTopRightBlock span {
+    display: none;
+  }
+  .headerBottomLinks {
+    gap: 20px;
+  }
+
+  /* content */
+  .contentTitle br {
+    display: none;
+  }
+  .contentTitle {
+    font-size: 23px;
+    line-height: 33px;
+  }
+  .contentBoxSub {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .contentBoxTitle1 {
+    font-size: 22px;
+    line-height: 30px;
+  }
+  .contentBoxTitle3 {
+    font-size: 22px;
+  }
+  /* comments */
+  .commentsInner {
+    padding: 0;
+  }
+  .commentsBlock {
+    padding-bottom: 30px;
+  }
+  .showMore {
+    margin-top: 30px;
+  }
+
+  /* cbc */
+  .cbcBlock {
+    width: 100%;
+  }
+
+  /* pages */
+  .pagesBox {
+    width: 50%;
+  }
+
+  /* footer */
+  .footerInner {
+    flex-direction: column;
+    row-gap: 10px;
+  }
+}
